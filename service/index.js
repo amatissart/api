@@ -19,7 +19,7 @@ module.exports.create = (peliasConfig) => {
   const structuredLibpostalConfiguration = new Libpostal(
     _.defaultTo(peliasConfig.api.services.libpostal, {}),
     _.property('clean.parsed_text.address')
-  )
+  );
 
   return {
     pip: {
