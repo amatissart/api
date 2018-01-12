@@ -21,11 +21,13 @@ module.exports = _.merge({}, peliasQuery.defaults, {
   'ngram:analyzer': 'peliasQueryFullToken',
   'ngram:field': 'name.default',
   'ngram:boost': 1,
+  'ngram:fuzziness': 'auto',
 
   'phrase:analyzer': 'peliasPhrase',
   'phrase:field': 'phrase.default',
   'phrase:boost': 1,
   'phrase:slop': 2,
+  'phrase:fuzziness': 'auto',
 
   'focus:function': 'linear',
   'focus:offset': '0km',
