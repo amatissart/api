@@ -18,13 +18,13 @@ module.exports.create = (peliasConfig, esclient, services) => {
   const structuredLibpostalShouldExecute = all(
     not(predicates.hasRequestErrors),
     predicates.hasParsedTextProperties.all('address')
-  )
+  );
 
   return [
     sanitizers.structured_geocoding.middleware(peliasConfig.api),
     postProc.requestLanguage,
     postProc.calcSize(),
-    controllers.structured_libpostal(services.structuredLibpostal.service, structuredLibpostalShouldExecute)
+    controllers.structured_libpostal(services.structuredLibpostal.service, structuredLibpostalShouldExecute),
     controllers.search(peliasConfig.api, esclient, queries.structured_geocoding, not(predicates.hasResponseDataOrRequestErrors)),
     postProc.trimByGranularityStructured(),
     postProc.distances('focus.point.'),
