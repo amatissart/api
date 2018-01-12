@@ -9,6 +9,7 @@ module.exports = {
           'name.default': {
             'query': 'soho grand',
             'analyzer': 'peliasQueryFullToken',
+            'fuzziness': 'auto',
             'boost': 1
           }
         }
@@ -18,6 +19,7 @@ module.exports = {
           'phrase.default': {
             'query': 'soho grand',
             'analyzer': 'peliasPhrase',
+            'fuzziness': 'auto',
             'type': 'phrase',
             'slop': 2,
             'boost': 1
@@ -30,6 +32,7 @@ module.exports = {
               'phrase.default': {
                 'query': 'soho grand',
                 'analyzer': 'peliasPhrase',
+                'fuzziness': 'auto',
                 'type': 'phrase',
                 'slop': 2,
                 'boost': 1
@@ -55,6 +58,7 @@ module.exports = {
               'phrase.default': {
                 'query': 'soho grand',
                 'analyzer': 'peliasPhrase',
+                'fuzziness': 'auto',
                 'type': 'phrase',
                 'slop': 2,
                 'boost': 1

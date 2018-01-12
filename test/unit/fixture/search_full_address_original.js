@@ -8,6 +8,7 @@ module.exports = {
           'name.default': {
             'query': '123 main st',
             'analyzer': 'peliasQueryFullToken',
+            'fuzziness': 'auto',
             'boost': 1
           }
         }
@@ -17,6 +18,7 @@ module.exports = {
           'phrase.default': {
             'query': '123 main st',
             'analyzer': 'peliasPhrase',
+            'fuzziness': 'auto',
             'type': 'phrase',
             'slop': 2,
             'boost': 1
@@ -30,6 +32,7 @@ module.exports = {
               'phrase.default': {
                 'query': '123 main st',
                 'analyzer': 'peliasPhrase',
+                'fuzziness': 'auto',
                 'type': 'phrase',
                 'slop': 2,
                 'boost': 1
@@ -55,6 +58,7 @@ module.exports = {
               'phrase.default': {
                 'query': '123 main st',
                 'analyzer': 'peliasPhrase',
+                'fuzziness': 'auto',
                 'type': 'phrase',
                 'slop': 2,
                 'boost': 1
